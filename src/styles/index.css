@@ -9,3 +9,15 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.text-center{
+    background-color: rgb(155, 154, 154);
+    width: 100vh;
+}
+.userContainer {
+    color: aliceblue;
+    background-color:dimgray;
+    justify-content: center;
+    margin: 20px;
+}
+
