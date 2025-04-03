@@ -11,8 +11,8 @@ const Home = () => {
 		
 		<div className="text-center">
 		
-			<h1 className="text-center mt-5">Tic Tac Toe in React.js </h1>
-			<h2 className="text-center mt-5">Pick a weapon </h2>
+			<h1 className="tittle">Tic Tac Toe in <strong>React.js </strong> </h1>
+			
 			
 			<User/>
 		

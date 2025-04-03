@@ -6,6 +6,13 @@ const User = () => {
     const [playerX, setPlayerX] = useState("");
     const [playerO, setPlayerO] = useState("");
     const [tablero, setTablero] = useState(false);
+    
+    let data =[ "", "", "", "", "", "", "", "", ""];
+
+    const TicTacToe =() => {}
+    const toggle = (w,num) =>{
+        
+    }
 
     const [turno, setTurno ] = useState ("");
     // const handleChange = (event) => {
@@ -24,6 +31,7 @@ const User = () => {
     }, [turno])
     return (
         <div className="container-md" >
+            <h1 className="tittle" >Pick a weapon</h1>
             {
                 !tablero ? (
 
@@ -32,31 +40,34 @@ const User = () => {
 
 
 
+                    
 
+                    <div className="userContainer">
 
-                    <div class="userContainer">
-                        <h1 className="tittle" > Choose your Weapon </h1>
-
-                        <div class="row align-items-start">
-                            <div class="col">
+                        <h2 className="h2">  Choose your <strong> Weapon  </strong> </h2>
+                        <div className="row">
+                        <div className="col d-flex flex-column align-items-center">
                                 {/* /* <input type="text" className="user" placeholder="" value={nombre}  onChange={handleChange} /> */}
-                                <input onChange={(e) => setPlayerX (e.target.value) } type="text" class="user" placeholder="" aria-label="" aria-describedby="basic-addon1" />
+                                <input onChange={(e) => setPlayerX (e.target.value) } type="text" className="user" placeholder="" aria-label="" aria-describedby="basic-addon1" />
 
-                                <button
-                                    onClick={() => setTurno ("X")}
+                                <button className="button"
+                                    onClick={() => setTurno ("X")
+                            
+                                    }
+
 
                                 >
-                                    X
+                                    <i className="fa-solid fa-xmark fa-7x"></i>
                                 </button>
 
                             </div>
-                            <div class="col">
-                                <input   onChange={(e) =>setPlayerO (e.target.value) }   type="text" class="user" placeholder="" aria-label="" aria-describedby="basic-addon1" />
+                            <div className="col d-flex flex-column align-items-center">
+                                <input   onChange={(e) =>setPlayerO (e.target.value) }   type="text" className="user" placeholder="" aria-label="" aria-describedby="basic-addon1" />
                                 <button
-                                    onClick={() => setTurno("O")}
+                                    className="button" onClick={() => setTurno("O")}
 
                                 >
-                                    O
+                                    <i className="fa-solid fa-o fa-7x"></i>
                                 </button>
                             </div>
 

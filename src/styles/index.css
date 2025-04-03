@@ -10,14 +10,85 @@
 
 */
 
+
 .text-center{
-    background-color: rgb(155, 154, 154);
-    width: 100vh;
+    background-color: rgb(32, 46, 71);
+    height: 100vh;
+    align-items: center;
+    
 }
 .userContainer {
     color: aliceblue;
-    background-color:dimgray;
+    background-color:rgb(32, 86, 148);
     justify-content: center;
+    margin: 20px;
+    height: 300px;
+}
+
+.boxes{
+    
+    height: 160px;
+    width: 160px;
+    background-color: rgb(128, 174, 240);
+    margin:  4px;
+    border-radius: 5%;
+    cursor: pointer;
+
+
+}
+
+.tablero {
+    width: 580px;
+    height: 600px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+
+}
+
+.button{
+   background-color: rgb(198, 235, 211);
+    justify-content: center; 
+    align-items: center; 
+    margin: 15px;
+    border: 4px solid rgb(104, 206, 140);
+    border-radius: 10px;
+    width: 150px;
+    padding: auto;
+    
+
+}
+
+.row{
+    display: flex;
+   justify-content: center;
+   
+}
+
+.tittle{
+    color: white;
+    background-color: rgb(32, 46, 71);
+    padding-top: 20px;
+
+}
+
+.h2{
+    color: coral;
+    padding: 15px;
+}
+
+.reset{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(198, 235, 211);
+    border: 4px solid rgb(104, 206, 140);
+    border-radius: 10px;
+    width: 300px;
     margin: 20px;
 }
 
+.user {
+    border: 4px solid rgb(104, 206, 140);
+    border-radius: 10px;
+
+}
