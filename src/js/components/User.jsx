@@ -6,32 +6,32 @@ const User = () => {
     const [playerX, setPlayerX] = useState("");
     const [playerO, setPlayerO] = useState("");
     const [tablero, setTablero] = useState(false);
-    
-    let data =[ "", "", "", "", "", "", "", "", ""];
 
-    const TicTacToe =() => {}
-    const toggle = (w,num) =>{
-        
+    let data = ["", "", "", "", "", "", "", "", ""];
+
+    const TicTacToe = () => { }
+    const toggle = (w, num) => {
+
     }
 
-    const [turno, setTurno ] = useState ("");
+    const [turno, setTurno] = useState("");
     // const handleChange = (event) => {
     //     setNombre(event.target.value); // Actualiza el estado con el valor del input
     //   };
 
-    
+
 
 
 
     useEffect(() => {
-        if (playerX !== "" && playerO !=="") {
+        if (playerX !== "" && playerO !== "") {
             setTablero(true)
         }
 
     }, [turno])
     return (
         <div className="container-md" >
-            <h1 className="tittle" >Pick a weapon</h1>
+            
             {
                 !tablero ? (
 
@@ -40,19 +40,19 @@ const User = () => {
 
 
 
-                    
+
 
                     <div className="userContainer">
-
+                        <h1 className="tittle" >Pick a weapon</h1>
                         <h2 className="h2">  Choose your <strong> Weapon  </strong> </h2>
                         <div className="row">
-                        <div className="col d-flex flex-column align-items-center">
+                            <div className="col d-flex flex-column align-items-center">
                                 {/* /* <input type="text" className="user" placeholder="" value={nombre}  onChange={handleChange} /> */}
-                                <input onChange={(e) => setPlayerX (e.target.value) } type="text" className="user" placeholder="" aria-label="" aria-describedby="basic-addon1" />
+                                <input onChange={(e) => setPlayerX(e.target.value)} type="text" className="user" placeholder="" aria-label="" aria-describedby="basic-addon1" />
 
                                 <button className="button"
-                                    onClick={() => setTurno ("X")
-                            
+                                    onClick={() => setTurno("X")
+
                                     }
 
 
@@ -62,7 +62,7 @@ const User = () => {
 
                             </div>
                             <div className="col d-flex flex-column align-items-center">
-                                <input   onChange={(e) =>setPlayerO (e.target.value) }   type="text" className="user" placeholder="" aria-label="" aria-describedby="basic-addon1" />
+                                <input onChange={(e) => setPlayerO(e.target.value)} type="text" className="user" placeholder="" aria-label="" aria-describedby="basic-addon1" />
                                 <button
                                     className="button" onClick={() => setTurno("O")}
 

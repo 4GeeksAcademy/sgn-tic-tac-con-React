@@ -8,7 +8,7 @@ const Tablero = () => {
 
     const [data, setData] = useState(["", "", "", "", "", "", "", "", ""]);
     const [count, setCount] = useState(0);
-    const [winer,setWiner] = useState();
+    const [winer, setWiner] = useState();
 
     console.log(data);
 
@@ -20,10 +20,10 @@ const Tablero = () => {
         let newData = [...data];
 
         if (count % 2 === 0) {
-            // e.target.innerHTML = `<i class="fa-solid fa-xmark fa-7x"></i>`;
+
             newData[num] = "X";
         } else {
-            // e.target.innerHTML = `<i class="fa-solid fa-o fa-7x"></i>`;
+
             newData[num] = "O";
         }
 
@@ -65,7 +65,7 @@ const Tablero = () => {
     }, [data]);
 
     useEffect(() => {
-        if ( typeof winer === "string" &&  winer  !== "") {
+        if (typeof winer === "string" && winer !== "") {
             alert(`ganó ${winer}`)
         }
     }, [winer])
@@ -79,47 +79,59 @@ const Tablero = () => {
 
     };
 
-
-
-    const handIcon =(i)=>{
+    const handIcon = (i) => {
         return data[i] == "X" ? <i class="fa-solid fa-xmark fa-7x"></i> : data[i] == "O" ? <i class="fa-solid fa-o fa-7x"></i> : null
-                      
-        
+
+
     };
+
+    const status = () => {
+        if (winer) {
+            return `Ganó ${winer}`;
+        } else {
+            return `Turno de ${count % 2 === 0 ? "X" : "O"}`;
+        }
+    };
+
+    
+    
 
 
 
     return (
         <div className="tablero">
+            <div className="status">
+                <h1>{status ()}</h1>
+            </div>
             <div className="row">
-                <div className="boxes" onClick={(e) => toggle(e, 0)}>  
-                      {handIcon (0)}
-                      </div>
+                <div className="boxes" onClick={(e) => toggle(e, 0)}>
+                    {handIcon(0)}
+                </div>
                 <div className="boxes" onClick={(e) => toggle(e, 1)}>
-                {handIcon (1)}
+                    {handIcon(1)}
                 </div>
                 <div className="boxes" onClick={(e) => toggle(e, 2)}>
-                {handIcon (2)}
+                    {handIcon(2)}
                 </div>
             </div>
             <div className="row">
                 <div className="boxes" onClick={(e) => toggle(e, 3)}>
-                {handIcon (3)}
+                    {handIcon(3)}
                 </div>
                 <div className="boxes" onClick={(e) => toggle(e, 4)}>
-                {handIcon (4)}
+                    {handIcon(4)}
                 </div>
                 <div className="boxes" onClick={(e) => toggle(e, 5)}>
-                {handIcon (5)}
+                    {handIcon(5)}
                 </div>
             </div>
             <div className="row">
-                <div className="boxes" onClick={(e) => toggle(e, 6)}>{handIcon (6)}</div>
-                <div className="boxes" onClick={(e) => toggle(e, 7)}>{handIcon (7)}</div>
-                <div className="boxes" onClick={(e) => toggle(e, 8)}>{handIcon (8)}</div>
+                <div className="boxes" onClick={(e) => toggle(e, 6)}>{handIcon(6)}</div>
+                <div className="boxes" onClick={(e) => toggle(e, 7)}>{handIcon(7)}</div>
+                <div className="boxes" onClick={(e) => toggle(e, 8)}>{handIcon(8)}</div>
                 <button className="reset" onClick={handleReset}>Reset</button>
             </div>
         </div>
     );
 
-};    export default Tablero;
+}; export default Tablero;
